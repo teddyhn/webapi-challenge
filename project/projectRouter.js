@@ -30,6 +30,17 @@ router.get('/:id', validateProjectId, (req, res) => {
     res.status(200).json(req.project);
 });
 
+router.get('/:id/actions', validateProjectId, (req, res) => {
+    Projects.getProjectActions(req.params.id)
+        .then(actions => {
+            res.status(200).json(actions)
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ message: "error retrieving project actions" })
+        })
+});
+
 router.delete('/:id', validateProjectId, (req, res) => {
     Projects.remove(req.params.id)
         .then(count => {
