@@ -26,13 +26,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Express is a framework for Node similar to how React is for the front-end.
+Express can handle server-side routing.
+
 - [ ] Describe Middleware?
+
+Middleware is an array of functions that are executed in the order in which they are written in the server code.
 
 - [ ] Describe a Resource?
 
+Anything that is accessed or managed by an API.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+A HTTP 200 status code.
+
 - [ ] How can we partition our application into sub-applications?
+
+By using Exprses Routers.
 
 ## Project Setup
 
